@@ -1,0 +1,82 @@
+/* menu.styles.css */
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    width: 60% ;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.selectables-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    width: 80%;
+}
+
+.option-box {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option-box:hover {
+    background-color: #e0e0e0;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu-options {
+        display: none;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .menu-options.open {
+        display: flex;
+    }
+
+    .option-box {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .selectables-container {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        width: 20%;
+    }
+
+
+}
