@@ -1,13 +1,15 @@
-const Portrait = (props) => {
+import React from 'react';
+import { useAvatar } from '../../contexts/avatarContext.contexts';
 
-
-    const { hat, eye, color } = props;
+const Portrait = () => {
+    const { avatar, randomizeAvatar } = useAvatar();
 
     return (
         <div className="portrait">
-            <h2>hat: {hat}</h2>
-            <h2>eye: {eye}</h2>
-            <h2>color: {color}</h2>
+            {Object.entries(avatar).map(([key, value]) => (
+                <h2 key={key}>{key}: {value}</h2>
+            ))}
+            <button onClick={randomizeAvatar}>Randomize</button>
         </div>
     );
 }
