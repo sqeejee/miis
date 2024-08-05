@@ -1,0 +1,10 @@
+.custom {
+   display: flex;
+   background-color: blue;
+   margin-top: 240px;
+   height: 60vh;
+}
+
+.menu {
+    flex: 0.6;
+}
