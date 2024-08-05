@@ -7,7 +7,6 @@ const options = {
     Eyebrows: ["Thin Eyebrows", "Thick Eyebrows", "Curved Eyebrows"],
     "Facial Hair": ["Beard", "Mustache", "Goatee"],
     Accessories: ["Glasses", "Hat", "Earrings"],
-    Gender: ["Boy", "Girl (boo_"]
 };
 
 export default options;
