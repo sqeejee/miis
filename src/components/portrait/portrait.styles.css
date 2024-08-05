@@ -1,16 +1,33 @@
+.portrait-container {
+    display: flex;
+    height: 100vh; /* Ensure the container takes up the full viewport height */
+    background-color: rosybrown; /* Background color for better visibility */
+}
+
 .portrait {
+    position: relative;
     background-color: orange;
     width: 500px;
-    height: 70%;
-    align-self: center;
-    margin-left: 5%;
+    height: 50%;
+    margin: 0 auto;
+    border: 1px solid #000; /* Optional: Border for better visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for better visibility */
+}
+
+.portrait img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 @media screen and (max-width: 768px) {
     .portrait {
-        width: 100%;
-        height: 50%;
-        align-self: center;
+        width: 90%;
+        height: auto;
+        margin: 20px;
     }
     
+    .portrait img {
+        height: auto;
+    }
 }

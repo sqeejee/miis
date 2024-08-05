@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './menu.styles.css';
 import MenuOption from './menuoption.component';
-import options from '../../contexts/options';
-import { useAvatar } from '../../contexts/avatarContext.contexts'; 
+import options from '../../CharacterAssets/options'; 
+import { useAvatar } from '../../contexts/avatarContext.contexts';
 
 const Menu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,7 @@ const Menu = () => {
     const handleMenuOptionClick = (attribute, value) => {
         setAvatar(prevAvatar => ({
             ...prevAvatar,
-            [attribute.toLowerCase()]: value
+            [attribute.toLowerCase()]: value.name // Set only the name
         }));
     };
 

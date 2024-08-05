@@ -1,10 +1,8 @@
 import React, { createContext, useContext, useState } from 'react';
-import options from './options'; // Adjust the import path as necessary
+import options from '../CharacterAssets/options';
 
-// Create the AvatarContext
 const AvatarContext = createContext();
 
-// Define the AvatarProvider component
 export const AvatarProvider = ({ children }) => {
   const initialAvatarState = Object.keys(options).reduce((acc, key) => {
     acc[key.toLowerCase()] = null;
@@ -13,16 +11,14 @@ export const AvatarProvider = ({ children }) => {
 
   const [avatar, setAvatar] = useState(initialAvatarState);
 
-  // Function to pick a random item from an array
   const getRandomItem = (array) => {
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex];
   };
 
-  // Function to randomize the avatar
   const randomizeAvatar = () => {
     const randomizedAvatar = Object.keys(options).reduce((acc, key) => {
-      acc[key.toLowerCase()] = getRandomItem(options[key]);
+      acc[key.toLowerCase()] = getRandomItem(options[key]).name; // Store only the name
       return acc;
     }, {});
     setAvatar(randomizedAvatar);
@@ -35,5 +31,4 @@ export const AvatarProvider = ({ children }) => {
   );
 };
 
-// Custom hook to use the AvatarContext
 export const useAvatar = () => useContext(AvatarContext);
