@@ -6,7 +6,6 @@ const AvatarContext = createContext();
 
 // Define the AvatarProvider component
 export const AvatarProvider = ({ children }) => {
-  // Initialize avatar state dynamically based on options keys
   const initialAvatarState = Object.keys(options).reduce((acc, key) => {
     acc[key.toLowerCase()] = null;
     return acc;
