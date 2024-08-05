@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAvatar } from '../../contexts/avatarContext.contexts';
+import './portrait.styles.css';
 
 const Portrait = () => {
     const { avatar, randomizeAvatar } = useAvatar();

@@ -1,13 +1,13 @@
 import React from "react";
-import Selection from "../selection/selection.component";
 import Menu from "../menu/menu.component";
 import './customize.styles.css';
+import Portrait from "../portrait/portrait.component";
 
 const CustomizeScreen = () => {
     return (
         <div className="custom">
             <Menu className="menu"/>
-            <Selection className="selection"/>
+            <Portrait className="selection"/>
         </div>
     );
 }

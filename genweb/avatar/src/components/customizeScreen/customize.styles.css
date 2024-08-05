@@ -1,7 +1,6 @@
 .custom {
    display: flex;
-   width: 100vw;
-   background-color: red;
+   background-color: blue;
    margin-top: 240px;
    height: 60vh;
 }
