@@ -34,9 +34,3 @@
         height: 50vh; /* Adjust height to match portrait container */
     }
 }
-
-.save-image {
-    background-color: lightgreen;
-    padding: 10px;
-    border: 1px solid black;
-}

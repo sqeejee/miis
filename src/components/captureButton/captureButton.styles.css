@@ -1,0 +1,7 @@
+.captureButton {
+    padding: 10px;
+    border: 1px solid black;
+    background-color: lightgreen;
+    cursor: pointer;
+    align-self: center;
+}
