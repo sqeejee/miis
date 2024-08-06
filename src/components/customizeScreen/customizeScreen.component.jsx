@@ -14,7 +14,7 @@ const CustomizeScreen = () => {
               const base64image = canvas.toDataURL("image/png");
               const link = document.createElement('a');
               link.href = base64image;
-              link.download = 'your-image-name.png';
+              link.download = 'doople.png';
               link.click();
             })
             .catch(err => console.error('Something went wrong:', err));
@@ -31,7 +31,7 @@ const CustomizeScreen = () => {
                 <Portrait ref={captureRef} />
             </div>
         </div>
-        <button onClick={handleCaptureClick}>Save portrait</button>
+        <button className="save-image" onClick={handleCaptureClick}>Save portrait</button>
         </>
     );
 }

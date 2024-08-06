@@ -42,7 +42,7 @@ const Menu = () => {
                     />
                 ))}
             </div>
-            <button onClick={randomizeAvatar}>Randomize</button>
+            <button className="randomizeButton" onClick={randomizeAvatar}>Randomize</button>
         </div>
     );
 }

@@ -3,8 +3,10 @@
     display: flex;
     flex-direction: column;
     width: 60% ;
+    height: 100px;
     border-bottom: 1px solid #ccc;
     align-items: center;
+    position: relative;
 }
 
 .hamburger {
@@ -49,11 +51,12 @@
         flex-direction: column;
         align-items: center;
         margin-top: 5%;
-        height: 40vh;
+        height: 50%;
     }
 
     .menu-options {
         width: 80%;
+        height: 20%;
     }
 
     .menu-options.open {
@@ -69,18 +72,22 @@
     .selectables-container {
         margin-top: 20px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         justify-content: center;
         width: 20%;
+        height: 50%;
     }
 
 
+    .randomizeButton {
+        display: none;
+    }
 }
 
-
-button {
+.randomizeButton {
     padding: 10px 20px;
     position: absolute;
-    bottom: 10%;
+    bottom: 30%; 
     outline: 1px solid #ccc;
+    width: 200px;
 }
