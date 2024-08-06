@@ -6,6 +6,7 @@ const options = {
       { name: "Face Shape 4", svg: require('./svgs/Heads/Head 4.svg').default },
       { name: "Face Shape 5", svg: require('./svgs/Heads/Head 5.svg').default },
       { name: "Face Shape 6", svg: require('./svgs/Heads/Head 6.svg').default },
+      { name: "Face Shape 7", svg: require('./svgs/Heads/Head 7.svg').default },
     ],
     Eyes: [
         { name: "Eyes 1", svg: require('./svgs/Eyes/Eyes 1.svg').default },
@@ -19,6 +20,9 @@ const options = {
         { name: "Eyes 9", svg: require('./svgs/Eyes/Eyes 9.svg').default },
         { name: "Eyes 10", svg: require('./svgs/Eyes/Eyes 10.svg').default },
         { name: "Eyes 11", svg: require('./svgs/Eyes/Eyes 11.svg').default },
+        { name: "Eyes 12", svg: require('./svgs/Eyes/Eyes 12.svg').default },
+        { name: "Eyes 13", svg: require('./svgs/Eyes/Eyes 13.svg').default },
+        { name: "Eyes 14", svg: require('./svgs/Eyes/Eyes 14.svg').default },
       ],
     Mouth : [
         { name: "Mouth 1", svg: require('./svgs/Mouths/Mouth 1.svg').default },
