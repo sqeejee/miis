@@ -1,7 +1,7 @@
 .portrait {
     top: 5%;
     position: relative;
-    background-color: orange;
+    background-color: lightcoral;
     width: 500px;
     height: 50%;
     border: 1px solid #000; /* Optional: Border for better visibility */

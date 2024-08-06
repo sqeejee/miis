@@ -82,5 +82,5 @@ button {
     padding: 10px 20px;
     position: absolute;
     bottom: 10%;
-    background-color: rebeccapurple;
+    outline: 1px solid #ccc;
 }

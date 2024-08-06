@@ -3,7 +3,7 @@ import { useAvatar } from '../../contexts/avatarContext.contexts';
 import './portrait.styles.css';
 import options from '../../CharacterAssets/options'; // Adjust the import path as necessary
 
-const Portrait = () => {
+const Portrait = React.forwardRef((props, ref) => {
   const { avatar, randomizeAvatar } = useAvatar();
 
   const getOptionSvg = (category, value) => {
@@ -18,7 +18,7 @@ const Portrait = () => {
 
   return (
     <>
-      <div className="portrait">
+      <div ref={ref} className="portrait">
         {Object.entries(avatar).map(([key, value]) => (
           value && (
             <img 
@@ -32,6 +32,6 @@ const Portrait = () => {
     </div>
     </>
   );
-}
+});
 
 export default Portrait;

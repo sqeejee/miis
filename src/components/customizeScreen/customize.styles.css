@@ -35,3 +35,7 @@
         height: 50vh; /* Adjust height to match portrait container */
     }
 }
+
+button {
+    margin-top: 10px;
+}
