@@ -1,7 +1,7 @@
 import React from "react";
-import Menu from "../menu/menu.component";
+import Menu from "../../components/menu/menu.component";
 import './customize.styles.css';
-import Portrait from "../portrait/portrait.component";
+import Portrait from "../../components/portrait/portrait.component";
 import html2canvas from 'html2canvas';
 
 const CustomizeScreen = () => {

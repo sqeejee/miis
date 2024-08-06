@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import CustomizeScreen from './components/customizeScreen/customizeScreen.component';
+import CustomizeScreen from './routes/customizeScreen/customizeScreen.component';
 function App() {
   return (
     <div className="App">
