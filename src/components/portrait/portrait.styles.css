@@ -1,15 +1,9 @@
-.portrait-container {
-    display: flex;
-    height: 100vh; /* Ensure the container takes up the full viewport height */
-    background-color: rosybrown; /* Background color for better visibility */
-}
-
 .portrait {
+    top: 5%;
     position: relative;
     background-color: orange;
     width: 500px;
     height: 50%;
-    margin: 0 auto;
     border: 1px solid #000; /* Optional: Border for better visibility */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for better visibility */
 }
@@ -20,14 +14,23 @@
     height: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
     .portrait {
-        width: 90%;
-        height: auto;
-        margin: 20px;
+        width: 100%;
+        height: 100%;
     }
     
     .portrait img {
-        height: auto;
+        width: 100%;
+        height: 100%;
     }
 }
+
+
+.mouth {
+    bottom: -20%; /* Adjust this value to move the mouth up or down */
+  }
+
+  .eyes {
+    bottom: 10%; /* Adjust this value to move the mouth up or down */
+  }

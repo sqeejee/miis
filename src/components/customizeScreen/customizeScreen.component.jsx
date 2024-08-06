@@ -6,8 +6,12 @@ import Portrait from "../portrait/portrait.component";
 const CustomizeScreen = () => {
     return (
         <div className="custom">
-            <Menu className="menu"/>
-            <Portrait className="selection"/>
+        <div className="menu-container">
+            <Menu />
+        </div>
+        <div className="portrait-container">
+            <Portrait />
+        </div>
         </div>
     );
 }

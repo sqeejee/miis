@@ -11,18 +11,26 @@ const Portrait = () => {
     const option = categoryOptions.find(opt => opt.name === value);
     return option ? option.svg : null;
   };
+  
+  onpageshow = () => {
+    randomizeAvatar();
+  }
 
   return (
-    <div className="portrait-container">
+    <>
       <div className="portrait">
         {Object.entries(avatar).map(([key, value]) => (
           value && (
-            <img key={key} src={getOptionSvg(key.charAt(0).toUpperCase() + key.slice(1), value)} alt={value} />
+            <img 
+              key={key} 
+              src={getOptionSvg(key.charAt(0).toUpperCase() + key.slice(1), value)} 
+              alt={value} 
+              className={key} 
+            />
           )
         ))}
-      </div>
-      <button onClick={randomizeAvatar}>Randomize</button>
     </div>
+    </>
   );
 }
 
