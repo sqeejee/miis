@@ -11,9 +11,10 @@
 
 .portrait-container {
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     display: flex;
-    justify-content: center; /* Center the content horizontally */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
 }
 
 /* Media query for smaller screens */
@@ -21,7 +22,7 @@
     .custom {
         flex-direction: column;
         flex-wrap: nowrap; 
-        margin-top: 5%;
+        margin-top: -5%;
         height: auto; 
     }
 
@@ -31,6 +32,6 @@
     }
 
     .menu-container {
-        height: 50vh; /* Adjust height to match portrait container */
+        height: auto; /* Adjust height to match portrait container */
     }
 }

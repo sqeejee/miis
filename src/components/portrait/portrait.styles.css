@@ -3,7 +3,7 @@
     position: relative;
     background-color: lightcoral;
     width: 500px;
-    height: 50%;
+    height: 100%;
     border: 1px solid #000; /* Optional: Border for better visibility */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for better visibility */
 }

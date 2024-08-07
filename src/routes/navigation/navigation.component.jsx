@@ -1,19 +1,37 @@
-import { Fragment, useContext } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { UserContext } from "../../contexts/users.context";
-import { useEffect } from "react";
 
 import './navigation.styles.css';
 
-import { signOutUser } from "../../utils/firebase/firebase.utils";
+import { signOutUser, retrieveProfileImage } from "../../utils/firebase/firebase.utils";
 
 
 const Navigation = () =>{
   const { currentUser, setCurrentUser } = useContext(UserContext);
   const userName = currentUser ? currentUser.displayName : null;
+  const [profileImageUrl, setProfileImageUrl] = useState('');
 
-  console.log(currentUser);
-  //Check is currentUser changes, update userName if so
+
+  useEffect(() => {
+    const fetchProfileImage = async () => {
+        if (currentUser) {
+            try {
+                const imageUrl = await retrieveProfileImage(currentUser);
+                setProfileImageUrl(imageUrl);
+                console.log("Image URL: " + imageUrl);
+            } catch (error) {
+                console.error('Failed to retrieve profile image:', error);
+            }
+        }
+    };
+
+    fetchProfileImage();
+}, [currentUser]);
+  
+
+
+
   useEffect(() => {
     if(currentUser)
     {
@@ -26,29 +44,27 @@ const Navigation = () =>{
     setCurrentUser(null);
   }
 
-
-    return(
-      
-      <Fragment>
-        {
-        }
-        <div className="navigation">
-            <Link className="logo-container" to='/'>
-            </Link>
-            <div className="nav-links-container">
-                <Link className='nav-link' to="/make">Make</Link>
-                {
-                  currentUser ? (
-                    <Link className='nav-link' to={`/user/${userName}`}>Hi {userName}</Link>
-                    
-                    )
-                    : (<Link className='nav-link' to="/auth">Sign In</Link>
-                  )}
-            </div>   
+  return (
+    <Fragment>
+      <div className="navigation">
+        <Link className="logo-container" to='/'>
+          {/* Logo can be added here */}
+        </Link>
+        <div className="nav-links-container">
+          <Link className='nav-link' to="/make">Make</Link>
+          {currentUser ? (
+            <>
+              <Link className='nav-link' to={`/user/${userName}`}>Hi {userName}</Link>
+              {profileImageUrl && <img src={profileImageUrl} className="pfp-mini" alt="Profile" />}
+            </>
+          ) : (
+            <Link className='nav-link' to="/auth">Sign In</Link>
+          )}
         </div>
-        <Outlet />
-      </Fragment>
-    )
-  }
+      </div>
+      <Outlet />
+    </Fragment>
+  );
+}
 
-  export default Navigation;    
+export default Navigation;

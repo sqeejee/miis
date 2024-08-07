@@ -12,17 +12,15 @@ const CustomizeScreen = () => {
   return (
     <>
       {currentUser ? (
-        <>
-          <div className="custom">
-            <div className="menu-container">
-              <Menu />
-            </div>
-            <div className="portrait-container">
-              <Portrait ref={captureRef} />
-            </div>
-            <CaptureButton captureRef={captureRef} />
+        <div className="custom">
+          <div className="menu-container">
+            <Menu />
           </div>
-        </>
+          <div className="portrait-container">
+            <Portrait ref={captureRef} />
+            <CaptureButton className="c-screen-cbutton" captureRef={captureRef}></CaptureButton>
+          </div>
+        </div>
       ) : (
         <h1>No user</h1>
       )}

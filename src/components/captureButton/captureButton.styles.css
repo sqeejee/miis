@@ -4,4 +4,41 @@
     background-color: lightgreen;
     cursor: pointer;
     align-self: center;
+    margin-top: 50px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 980px) {
+    .captureButton {
+        padding: 10px;
+        border: 1px solid black;
+        background-color: red;
+        cursor: pointer;
+        align-self: center;
+        bottom: 200px;
+    }
+}
+
+.capture-button-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-size: 24px;
+    pointer-events: none; /* Ensure overlay does not block interactions */
 }
